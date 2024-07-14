@@ -1,17 +1,18 @@
 import './App.css';
-import Button from '@mui/material/Button';
-import Counter from './components/Count';
-import { useDispatch } from 'react-redux';
-
+import Product from "./components/Product";
+import Cart from "./components/Cart";
+import products from "./product.json";
 
 function App() {
-  const dispatch = useDispatch();
   return (
-    <>
-      <Button onClick={(e) => dispatch({ type : "INCREMENT"})} variant="contained">Increment</Button>
-      <Counter />
-      <Button onClick={(e) => dispatch({ type : "DECREMENT"})} variant="contained">Decrement</Button>
-    </>
+    <div className="App">
+      <Cart />
+      <div className="products">
+        {products.map((product) => (
+          <Product {...product} />
+        ))}
+      </div>
+    </div>
 
   );
 
