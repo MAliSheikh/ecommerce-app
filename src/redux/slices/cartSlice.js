@@ -13,10 +13,7 @@ const cartSlice = createSlice({
   },
 });
 
-export const getItemsSelector = createSelector(
-  (state) => state.cart.cart,
-  (cart) => cart
-);
+
 export const { addItem, removeItem } = cartSlice.actions;
 
 export default cartSlice.reducer;

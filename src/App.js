@@ -9,7 +9,8 @@ function App() {
       <Cart />
       <div className="products">
         {products.map((product) => (
-          <Product {...product} />
+          <Product products={products} />
+          // <Product {...product} />
         ))}
       </div>
     </div>
