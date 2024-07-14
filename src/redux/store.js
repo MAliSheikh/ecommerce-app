@@ -1,13 +1,27 @@
+// redux thunk
 import { configureStore } from "@reduxjs/toolkit";
-import cartReducer from "./slices/cartSlice";
+import todoReducer from './slices/todoSlice'
 
 export const store = configureStore({
-    reducer: {
-        cart : cartReducer,
-    },
-    devTools: true,
+  reducer: {
+    todo: todoReducer,
+  },
 });
 
+// Redux  Toolkit
+
+// import { configureStore } from "@reduxjs/toolkit";
+// import cartReducer from "./slices/cartSlice";
+
+// export const store = configureStore({
+//     reducer: {
+//         cart : cartReducer,
+//     },
+//     devTools: true,
+// });
+
+
+// simple Redux
 // import { createStore } from 'redux';
 
 // const initialState = 0;
